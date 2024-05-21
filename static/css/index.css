@@ -31,3 +31,28 @@ h1, h2 {
 .bg-dark{
     background-color: rgba(0, 0, 0, 0.4)!important;
 }
+
+.verified_information{
+    background-image: url(/static/img/verified_info.png);
+    width: auto;
+    height: 7vw;
+    /* max-height: 10vw; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    position: relative;
+}
+
+.countdown{
+    background-image: url(/static/img/countdown.png);
+    width: auto;
+    height: 7vw;
+    /* max-height: 10vw; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    position: relative;
+}
+
