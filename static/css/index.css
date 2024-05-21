@@ -1,24 +1,23 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 20px;
 }
 
 .countdown-container, .info-container {
-    background-color: white;
+    background-color: black;
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 90%;
     max-width: 600px;
     text-align: center;
 }
 
 h1, h2 {
-    color: #0078d7;
+    color: white;
 }
 
 #timer {
