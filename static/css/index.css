@@ -10,7 +10,7 @@ body {
 }
 
 .countdown-container, .info-container {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
     margin: 20px auto;
     padding: 20px;
     width: 100%;
@@ -29,5 +29,5 @@ h1, h2 {
 }
 
 .bg-dark{
-    background-color:black!important;
+    background-color: rgba(0, 0, 0, 0.4)!important;
 }
