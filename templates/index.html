@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Fortnite Season</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="countdown-container">
+        <h1>Countdown to New Fortnite Season</h1>
+        <div id="countdown">
+            <p id="timer"></p>
+        </div>
+    </div>
+    <div class="info-container">
+        <h2>Verified Information</h2>
+        <p>
+            All the latest verified information about the upcoming Fortnite season will be updated here.
+        </p>
+        <!-- Update this section with verified information as it becomes available -->
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
