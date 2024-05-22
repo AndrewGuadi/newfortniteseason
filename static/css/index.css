@@ -4,7 +4,7 @@ body{
     background-image: url('/static/img/chfiveseathree.jpg');
     background-position: top;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat:space;
     background-color:rgb(243, 116, 13);
     color: white;
     margin: 0;
@@ -55,4 +55,9 @@ h1, h2 {
     background-repeat: no-repeat;
     margin: auto;
     position: relative;
+}
+
+
+.shadow-container {
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 1);
 }
