@@ -1,12 +1,13 @@
-body {
+body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* background-color: black; */
-    background-image: url('/static/img/fornitenewseason.png');
-    background-position: center;
-    background-size: cover;
+    background-image: url('/static/img/chfiveseathree.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:rgb(243, 116, 13);
     color: white;
     margin: 0;
-    padding: 20px;
 }
 
 .countdown-container, .info-container {
@@ -28,11 +29,11 @@ h1, h2 {
     color: white;
 }
 
-.bg-dark{
-    background-color: rgba(0, 0, 0, 0.4)!important;
+.bg-dark {
+    background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
-.verified_information{
+.verified_information {
     background-image: url(/static/img/verified_info.png);
     width: auto;
     height: 7vw;
@@ -44,7 +45,7 @@ h1, h2 {
     position: relative;
 }
 
-.countdown{
+.countdown {
     background-image: url(/static/img/countdown.png);
     width: auto;
     height: 7vw;
@@ -55,4 +56,3 @@ h1, h2 {
     margin: auto;
     position: relative;
 }
-

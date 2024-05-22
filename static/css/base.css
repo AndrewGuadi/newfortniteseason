@@ -1,0 +1,40 @@
+header {
+    position: static;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    background-color: black !important;
+}
+
+.navbar-nav .nav-link {
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    text-align: center; /* Center the text */
+    display: block; /* Ensure block display for full width on mobile */
+    width: auto; /* Auto width for mobile */
+}
+
+.navbar-nav .nav-link:hover {
+    border-color: #fff; /* Change to your desired color */
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        width: 100px; /* Fixed width for desktop */
+        display: inline-block; /* Inline block for horizontal alignment */
+    }
+
+    .navbar-nav {
+        display: flex; /* Flexbox for alignment */
+        justify-content: flex-end; /* Align nav items to the right */
+    }
+
+    .navbar-brand {
+        font-size: 2rem; /* Larger font size for desktop */
+    }
+}
