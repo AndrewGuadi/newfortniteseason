@@ -45,7 +45,7 @@ def sitemap():
         if "GET" in rule.methods and len(rule.arguments) == 0:
             priority = '1.0' if rule.rule == '/' else '0.8'
             pages.append(
-                ["http://www.newfortniteseason.com" + str(rule.rule), current_time, priority]
+                ["https://www.newfortniteseason.com" + str(rule.rule), current_time, priority]
             )
 
     sitemap_xml = render_template('sitemap_template.xml', pages=pages)
