@@ -1,20 +1,41 @@
-function countdown() {
-    const countToDate = new Date("2024-05-24T00:00:00").getTime(); // Replace "YYYY-MM-DDT00:00:00" with the actual date and time
-    const now = new Date().getTime();
-    const difference = countToDate - now;
+document.addEventListener('DOMContentLoaded', function () {
+    function updateTimer() {
+        const targetDate = new Date('May 24, 2024 00:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = targetDate - now;
 
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('timer').innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+        setDigit('days', days);
+        setDigit('hours', hours);
+        setDigit('minutes', minutes);
+        setDigit('seconds', seconds);
 
-    if (difference < 0) {
-        clearInterval(x);
-        document.getElementById('timer').innerHTML = "EXPIRED";
+        if (distance < 0) {
+            clearInterval(interval);
+            document.getElementById('countdown').innerHTML = "Expect Downtime until 5am EST";
+        }
     }
-}
 
-const x = setInterval(countdown, 1000);
+    function setDigit(groupId, value) {
+        const group = document.getElementById(groupId);
+        const digits = String(value).padStart(2, '0').split('');
+
+        digits.forEach((digit, i) => {
+            const currentDigit = group.children[i];
+            if (currentDigit.innerText !== digit) {
+                currentDigit.classList.add('rotate');
+                setTimeout(() => {
+                    currentDigit.innerText = digit;
+                    currentDigit.classList.remove('rotate');
+                }, 300);
+            }
+        });
+    }
+
+    const interval = setInterval(updateTimer, 1000);
+    updateTimer();
+});

@@ -1,11 +1,10 @@
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* background-color: black; */
     background-image: url('/static/img/chfiveseathree.jpg');
     background-position: top;
     background-size: contain;
-    background-repeat:space;
-    background-color:rgb(243, 116, 13);
+    background-repeat: space;
+    background-color: rgb(243, 116, 13);
     color: white;
     margin: 0;
 }
@@ -15,7 +14,6 @@ body{
     margin: 20px auto;
     padding: 5vw;
     width: 100%;
-    /* max-width: 600px; */
     text-align: center;
 }
 
@@ -23,20 +21,47 @@ h1, h2 {
     color: white;
 }
 
-#timer {
-    font-size: 1.0rem!important;
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digit-group {
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 90px;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.digit {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    line-height: 10vw;
+    width: 100%;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    transition: transform 0.6s ease-in-out;
+    border:1px solid black;
+}
+
+.colon {
+    font-size: 4rem;
     font-weight: bold;
     color: white;
+    line-height: 90px;
 }
 
 .bg-dark {
     background-color: rgba(0, 0, 0, 0.6) !important;
 }
 
-.verified_information, .unverified_information{
+.verified_information, .unverified_information {
     width: auto;
     height: 7vw;
-    /* max-height: 10vw; */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -48,23 +73,20 @@ h1, h2 {
     background-image: url(/static/img/verified_info.png);
 }
 
-.unverified_information{
+.unverified_information {
     background-image: url('/static/img/unverified-information.png');
 }
 
-
-.countdown-wrapper{
-    background-color: rgba(0,0,0,0.6);
-    padding:1vw 0.3vw 1vw 0.3vw;
-    
+.countdown-wrapper {
+    background-color: rgba(0, 0, 0, 0.66);
+    padding:1vw 3vw;
     margin: auto;
-    margin-top:0px;
 }
+
 .countdown {
     background-image: url(/static/img/countdown.png);
     width: auto;
     height: 7vw;
-    /* max-height: 10vw; */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -72,17 +94,31 @@ h1, h2 {
     position: relative;
 }
 
-
-
 .shadow-container {
     box-shadow: -5px -5px 10px rgba(0, 0, 0, 1);
 }
 
+.rotate {
+    transform: rotateX(-180deg);
+}
 
 @media (min-width: 992px) {
-    #timer {
-        font-size:5.0rem!important;
-        
+
+    .countdown-wrapper{
+        padding:1vw;
+    }
+    .digit-group {
+        width: 10vw;
+        height: 90px;
+    }
+    .digit {
+        font-size: 3rem;
+        line-height: 10vw;
     }
 
+    .colon {
+        font-size: 8rem;
+    }
 }
+
+

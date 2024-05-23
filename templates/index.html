@@ -14,8 +14,30 @@
 {% block content %}
 <div class="container w-12" id="main">
     <div class="countdown-container text-center bg-dark rounded">
-        <div class="countdown-wrapper"><div class='countdown mt-3 mb-4'></div></div>
-        <p class="mt-3" id="timer"></p>
+        <div class="countdown"></div>
+        <div class="countdown-wrapper">
+            <div id="countdown">
+                <div class="digit-group" id="days">
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="digit-group" id="hours">
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="digit-group" id="minutes">
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="digit-group" id="seconds">
+                    <div class="digit">0</div>
+                    <div class="digit">0</div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="info-container mt-4 bg-dark rounded shadow-container">
         <div class="countdown-wrapper"><div class="verified_information"></div></div>
