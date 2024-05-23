@@ -31,7 +31,7 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10px;
+    
 }
 
 .digit-group {
@@ -64,7 +64,9 @@ h1, h2 {
 }
 
 .colon {
-    font-size: 4rem;
+    position: relative;
+    top:-3vw;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     line-height: 90px;
@@ -126,6 +128,7 @@ h1, h2 {
     .time-section {
         flex-direction: column;
         align-items: center;
+        margin: 0 10px;
     }
 
     .digit-group {
@@ -156,7 +159,8 @@ h1, h2 {
     }
 
     .digit {
-        font-size: 2rem;
+        padding:5px;
+        font-size: 1rem;
         line-height: 6vw;
     }
 
