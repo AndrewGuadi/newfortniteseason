@@ -38,7 +38,7 @@ def shop():
 @app.route('/sitemap.xml')
 def sitemap():
     pages = []
-    current_time = datetime.now().isoformat()
+    current_time = datetime.now().strftime("%Y-%m-%d")
 
     # Add static pages
     for rule in app.url_map.iter_rules():
