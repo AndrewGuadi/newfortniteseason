@@ -2,20 +2,26 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('/static/img/fornitenewseason.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     color: white;
     margin: 0;
 }
 
 .theme-container {
-    background-color: rgba(0, 0, 0, 0.4);
-    margin: 20px auto;
+    background-color: #1e1e1e;
+    color: #f4f4f4;
     padding: 20px;
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
+    border-radius: 10px;
 }
 
-h1, h2 {
-    color: white;
+.theme-container h1,
+.theme-container h2,
+.theme-container p {
+    color: #f4f4f4;
+}
+
+.card {
+    margin:3vw auto;
+    background-color: #2b2b2b;
+    color: #f4f4f4;
 }
