@@ -13,7 +13,7 @@ body{
 .countdown-container, .info-container {
     background-color: rgba(0, 0, 0, 0.4);
     margin: 20px auto;
-    padding: 20px;
+    padding: 5vw;
     width: 100%;
     /* max-width: 600px; */
     text-align: center;
@@ -24,7 +24,7 @@ h1, h2 {
 }
 
 #timer {
-    font-size: 24px;
+    font-size: 3.0rem!important;
     font-weight: bold;
     color: white;
 }
@@ -45,6 +45,13 @@ h1, h2 {
     position: relative;
 }
 
+
+.countdown-wrapper{
+    background-color: rgba(0,0,0,0.6);
+    padding:0.3vw;
+    margin: auto;
+    margin-top:0px;
+}
 .countdown {
     background-image: url(/static/img/countdown.png);
     width: auto;
@@ -56,6 +63,7 @@ h1, h2 {
     margin: auto;
     position: relative;
 }
+
 
 
 .shadow-container {
