@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<meta name="description" content="Visit the Fortnite Season 5 Chapter 3 Shop. Get exclusive merchandise and stay tuned for more products.">
+<meta name="keywords" content="Fortnite, Season 5 Chapter 3, Fortnite Shop, Merchandise">
+{% endblock %}
+
+{% block title %}Fortnite Season 5 Chapter 3 - Shop{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5" id="main">
+  <div class="shop-container text-center p-3 bg-dark rounded">
+    <h1 class="fs-1">Fortnite Season 5 Chapter 3 Shop</h1>
+    <p class="fs-4">Explore exclusive Fortnite merchandise and gear up for the new season.</p>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="/static/img/shirt1.webp" class="card-img-top" alt="Fortnite Shirt 1">
+          <div class="card-body">
+            <h5 class="card-title">Llama Leisure - Winning in Style</h5>
+            <p class="card-text">$19.99</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="/static/img/shirt2.webp" class="card-img-top" alt="Fortnite Shirt 2">
+          <div class="card-body">
+            <h5 class="card-title">Cyber Warrior - Neon Nights</h5>
+            <p class="card-text">$19.99</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="fs-4 mt-4">More products are coming soon. Stay tuned!</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/shop.js') }}"></script>
+{% endblock %}

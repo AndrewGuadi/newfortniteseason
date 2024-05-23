@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<meta name="description" content="Meet the special guests in Fortnite Season 5 Chapter 3. Discover new characters joining the battle.">
+<meta name="keywords" content="Fortnite, Season 5 Chapter 3, Fortnite Guests, New Characters">
+{% endblock %}
+
+{% block title %}Fortnite Season 5 Chapter 3 - Guests{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/guests.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5" id="main">
+  <div class="guests-container text-center p-3 bg-dark rounded">
+    <h1 class="fs-1">Special Guests in Season 5 Chapter 3</h1>
+    <p class="fs-4">Meet the special guests in Fortnite Season 5 Chapter 3. These unique characters bring new stories and abilities to the game.</p>
+    <img src="/static/img/season5_guests.jpg" alt="Season 5 Guests" class="img-fluid mt-3 mb-4">
+    <h2 class="fs-2">Featured Guests</h2>
+    <p class="fs-4">These guest characters come from different universes, bringing new challenges and excitement to Fortnite.</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/guests.js') }}"></script>
+{% endblock %}

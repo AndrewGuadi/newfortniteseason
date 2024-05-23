@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<meta name="description" content="Explore the new skins introduced in Fortnite Season 5 Chapter 3. Find out which new characters you can play as and collect.">
+<meta name="keywords" content="Fortnite, Season 5 Chapter 3, Fortnite Skins, New Skins">
+{% endblock %}
+
+{% block title %}Fortnite Season 5 Chapter 3 - Skins{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/skins.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5" id="main">
+  <div class="skins-container text-center p-3 bg-dark rounded">
+    <h1 class="fs-1">New Skins in Season 5 Chapter 3</h1>
+    <p class="fs-4">Discover the latest skins in Fortnite Season 5 Chapter 3. This season brings a variety of new characters, each with unique styles and backstories.</p>
+    <img src="/static/img/season5_skins.jpg" alt="Season 5 Skins" class="img-fluid mt-3 mb-4">
+    <h2 class="fs-2">Featured Skins</h2>
+    <p class="fs-4">Collect and customize your favorite skins, from post-apocalyptic warriors to mysterious survivors.</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/skins.js') }}"></script>
+{% endblock %}

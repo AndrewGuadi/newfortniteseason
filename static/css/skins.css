@@ -1,0 +1,38 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/static/img/fornitenewseason.png');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin: 0;
+}
+
+.skins-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: white;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.fs-1 {
+    font-size: 2.5rem;
+}
+
+.fs-2 {
+    font-size: 2rem;
+}
+
+.fs-4 {
+    font-size: 1.25rem;
+}

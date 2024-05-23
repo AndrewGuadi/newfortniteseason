@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<meta name="description" content="Explore the new vehicles introduced in Fortnite Season 5 Chapter 3. Learn about the new ways to navigate the map and dominate the battlefield.">
+<meta name="keywords" content="Fortnite, Season 5 Chapter 3, Fortnite Vehicles, New Vehicles">
+{% endblock %}
+
+{% block title %}Fortnite Season 5 Chapter 3 - Vehicles{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/vehicles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5" id="main">
+  <div class="vehicles-container text-center p-3 bg-dark rounded">
+    <h1 class="fs-1">New Vehicles in Season 5 Chapter 3</h1>
+    <p class="fs-4">Discover the latest vehicles in Fortnite Season 5 Chapter 3. This season brings a variety of new rides, each with unique abilities and features.</p>
+    <img src="/static/img/season5_vehicles.jpg" alt="Season 5 Vehicles" class="img-fluid mt-3 mb-4">
+    <h2 class="fs-2">Featured Vehicles</h2>
+    <p class="fs-4">Navigate the post-apocalyptic world with these new vehicles, from rugged off-roaders to high-speed racers.</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/vehicles.js') }}"></script>
+{% endblock %}

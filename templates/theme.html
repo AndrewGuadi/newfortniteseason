@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<meta name="description" content="Discover the theme for Fortnite Season 5 Chapter 3. Explore the new adventures, challenges, and storylines awaiting players.">
+<meta name="keywords" content="Fortnite, Season 5 Chapter 3, Fortnite Theme, New Season">
+{% endblock %}
+
+{% block title %}Fortnite Season 5 Chapter 3 - Theme{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5" id="main">
+  <div class="theme-container text-center p-3 bg-dark rounded">
+    <h1 class="fs-1">Fortnite Season 5 Chapter 3 Theme</h1>
+    <p class="fs-4">Welcome to the new season of Fortnite! This chapter's theme revolves around a post-apocalyptic world where survivors band together to rebuild society amidst the ruins. Expect thrilling new challenges, mysterious quests, and a storyline that will keep you on the edge of your seat.</p>
+    <img src="/static/img/season5_theme.jpg" alt="Season 5 Theme" class="img-fluid mt-3 mb-4">
+    <h2 class="fs-2">What's New?</h2>
+    <p class="fs-4">This season introduces new locations, unique characters, and an array of weapons and items to help you survive and thrive in this new world. The map has been drastically altered, with hidden bunkers, new landmarks, and dangers lurking around every corner.</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+{% endblock %}
