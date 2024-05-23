@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response, url_for
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -33,6 +34,22 @@ def epic():
 @app.route('/shop')
 def shop():
     return render_template('shop.html')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    pages = []
+    current_time = datetime.now().isoformat()
+
+    # Add static pages
+    for rule in app.url_map.iter_rules():
+        if "GET" in rule.methods and len(rule.arguments) == 0:
+            priority = '1.0' if rule.rule == '/' else '0.8'
+            pages.append(
+                ["http://www.newfortniteseason.com" + str(rule.rule), current_time, priority]
+            )
+
+    sitemap_xml = render_template('sitemap_template.xml', pages=pages)
+    return Response(sitemap_xml, mimetype='application/xml')
 
 if __name__ == '__main__':
     app.run(debug=True)

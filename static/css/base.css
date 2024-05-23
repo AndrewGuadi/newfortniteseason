@@ -9,6 +9,7 @@ header {
     background-color: black !important;
 }
 
+
 .navbar-nav .nav-link {
     border: 1px solid transparent;
     padding: 0.5rem 1rem;
@@ -17,6 +18,15 @@ header {
     display: block; /* Ensure block display for full width on mobile */
     width: auto; /* Auto width for mobile */
 }
+
+#seasonLogo{
+    width:55vw;
+}
+
+#seasonLogo:hover{
+    filter: invert(50%);
+}
+
 
 .navbar-nav .nav-link:hover {
     border-color: #fff; /* Change to your desired color */
@@ -37,6 +47,11 @@ header {
     .navbar-brand {
         font-size: 2rem; /* Larger font size for desktop */
     }
+
+    #seasonLogo{
+        width:25vw;
+    }
+    
 }
 
 footer {
