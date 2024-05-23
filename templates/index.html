@@ -15,7 +15,7 @@
 <div class="container w-12" id="main">
     <div class="countdown-container text-center bg-dark rounded">
         <div class="countdown-wrapper"><div class='countdown mt-3 mb-4'></div></div>
-        <p class="mt-5" id="timer"></p>
+        <p class="mt-3" id="timer"></p>
     </div>
     <div class="info-container mt-4 bg-dark rounded shadow-container">
         <div class="verified_information"></div>
@@ -43,6 +43,35 @@
                 <div class="col-md-6">
                     <h3>Vehicle Weapons</h3>
                     <img src="{{ url_for('static', filename='img/vehicle_weapons.png') }}" alt="Vehicle Weapons" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- unverified information -->
+    <div class="info-container mt-4 bg-dark rounded shadow-container">
+        <div class="unverified_information"></div>
+        <p>
+            All the things listed below are unverified, but highly talked about items for the new update.
+        </p>
+        <div class="verified-section">
+            <h2>COLLABS:</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Pirate of the Caribbean</h3>
+                    <img src="{{ url_for('static', filename='img/pirates.png') }}" alt="Pirates of the Caribbean meets fornite" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Metallica</h3>
+                    <img src="{{ url_for('static', filename='img/metallica.png') }}" alt="Metallica in Fortnite" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Marvel Back Again?</h3>
+                    <img src="{{ url_for('static', filename='img/marvel.png') }}" alt="Marvel in Fortnite Seaon 5 Chapter 3" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Mayhem From Borderlands</h3>
+                    <img src="{{ url_for('static', filename='img/borderlands.png') }}" alt="Mayhem from Borderlands in Fortnite Season 5 Chapter 3" class="img-fluid">
                 </div>
             </div>
         </div>

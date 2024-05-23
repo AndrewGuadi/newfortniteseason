@@ -24,7 +24,7 @@ h1, h2 {
 }
 
 #timer {
-    font-size: 3.0rem!important;
+    font-size: 1.0rem!important;
     font-weight: bold;
     color: white;
 }
@@ -68,4 +68,13 @@ h1, h2 {
 
 .shadow-container {
     box-shadow: -5px -5px 10px rgba(0, 0, 0, 1);
+}
+
+
+@media (min-width: 992px) {
+    #timer {
+        font-size:5.0rem!important;
+        
+    }
+
 }
