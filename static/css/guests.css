@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: white;
 }
 
@@ -33,6 +33,21 @@ h1, h2 {
     font-size: 2rem;
 }
 
+.fs-3 {
+    font-size: 1.75rem;
+}
+
 .fs-4 {
     font-size: 1.25rem;
+}
+
+.guest-list {
+    margin-top: 20px;
+}
+
+.guest-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
