@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const rankButtonsContainer = document.querySelector('.btn-group');
 
             if (targetId === 'weapons') {
-                rankButtonsContainer.style.display = 'block';
+                rankButtonsContainer.style.display = 'flex';
                 updateStats('stats-body-', 'common'); // Reset to common on tab switch
                 updateHeaders('rank-header-', 'common');
             } else if (targetId === 'items') {
@@ -76,3 +76,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+

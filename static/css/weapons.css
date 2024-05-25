@@ -158,4 +158,20 @@ h1, h2, h3 {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    /* Additional styles to improve item tab formatting on mobile */
+    .tab-pane .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .tab-pane .col-md-6,
+    .tab-pane .col-lg-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .tab-pane .img-fluid {
+        margin-bottom: 10px;
+    }
 }
