@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             clearInterval(interval);
             const countdownElement = document.getElementById('countdown');
             if (countdownElement) {
-                countdownElement.innerHTML = "Expect Downtime until 7am EST";
+                countdownElement.innerHTML = "Chapter 5 Season 3 Started May 24th @ 2:00 A.M. est";
             } else {
                 console.error("Element with ID 'countdown' not found.");
             }

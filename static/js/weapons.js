@@ -11,9 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to the clicked button
             this.classList.add('active-rank');
 
-            // Update weapon stats
-            updateStats('stats-body-', rank);
-            updateHeaders('rank-header-', rank);
+            // Check which tab is active
+            const activeTab = document.querySelector('#categoryTab .nav-link.active').id;
+            if (activeTab === 'weapons-tab') {
+                // Update weapon stats
+                updateStats('stats-body-', rank);
+                updateHeaders('rank-header-', rank);
+            } else if (activeTab === 'items-tab') {
+                // Update item stats
+                updateStats('stats-body-item-', rank);
+                updateHeaders('rank-header-item-', rank);
+            }
         });
     });
 
