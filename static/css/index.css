@@ -33,6 +33,10 @@ h1, h2 {
     align-items: center;
     
 }
+.countdown-style {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+   }
 
 .digit-group {
     display: flex;
@@ -149,6 +153,10 @@ h1, h2 {
     .label {
         font-size: 1.5rem;
         margin-top: 10px;
+    }
+
+    .countdown-style {
+        font-size: 2.5rem; 
     }
 }
 

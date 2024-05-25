@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const countdownElement = document.getElementById('countdown');
             if (countdownElement) {
                 countdownElement.innerHTML = "Chapter 5 Season 3 Started May 24th @ 2:00 A.M. est";
+                countdownElement.classList.add("countdown-style");
             } else {
                 console.error("Element with ID 'countdown' not found.");
             }
