@@ -106,6 +106,12 @@ h1, h2, h3 {
     background: #ffd700;
 }
 
+/* Standardize image size */
+.standardized-image {
+    max-width: 300px; /* adjust as needed */
+    height: auto;
+}
+
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .table-responsive {
