@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<meta name="description" content="Discover the weapons introduced in Fortnite Season 5 Chapter 3. Get detailed stats and descriptions.">
+<meta name="keywords" content="Fortnite, Season 5 Chapter 3, Fortnite Weapons, New Weapons">
+{% endblock %}
+
+{% block title %}Fortnite Season 5 Chapter 3 - Weapons{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/weapons.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5" id="main">
+  <div class="weapons-container p-3 bg-dark rounded">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="fs-1">Weapons (New)</h1>
+        <ul class="nav nav-tabs justify-content-center mt-4" id="weaponsTab" role="tablist">
+          {% for weapon in weapons %}
+          <li class="nav-item" role="presentation">
+            <a class="nav-link {% if loop.first %}active{% endif %}" id="weapon-tab-{{ loop.index0 }}" data-bs-toggle="tab" href="#weapon-{{ loop.index0 }}" role="tab" aria-controls="weapon-{{ loop.index0 }}" aria-selected="{{ 'true' if loop.first else 'false' }}">{{ weapon.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <div class="btn-group" role="group" aria-label="Weapon Ranks">
+          <button type="button" class="btn btn-secondary rank-button" data-rank="common">Common</button>
+          <button type="button" class="btn btn-secondary rank-button" data-rank="uncommon">Uncommon</button>
+          <button type="button" class="btn btn-secondary rank-button" data-rank="rare">Rare</button>
+          <button type="button" class="btn btn-secondary rank-button" data-rank="epic">Epic</button>
+          <button type="button" class="btn btn-secondary rank-button" data-rank="legendary">Legendary</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content mt-4" id="weaponsTabContent">
+      {% for weapon in weapons %}
+      <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="weapon-{{ loop.index0 }}" role="tabpanel" aria-labelledby="weapon-tab-{{ loop.index0 }}">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="fs-2">{{ weapon.name }}</h2>
+            <p class="fs-4">{{ weapon.description }}</p>
+            <div class="row justify-content-center">
+              <div class="col-md-6 col-lg-4">
+                <img src="{{ url_for('static', filename='img/' + weapon.image) }}" alt="{{ weapon.name }}" class="img-fluid mb-3">
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="table-responsive">
+                  <table class="table table-dark table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Stat</th>
+                        <th id="rank-header-{{ loop.index0 }}" class="common">Common</th>
+                      </tr>
+                    </thead>
+                    <tbody id="stats-body-{{ loop.index0 }}">
+                      <tr>
+                        <td>DPS</td>
+                        <td class="common">{{ weapon.stats.common.DPS }}</td>
+                        <td class="uncommon d-none">{{ weapon.stats.uncommon.DPS }}</td>
+                        <td class="rare d-none">{{ weapon.stats.rare.DPS }}</td>
+                        <td class="epic d-none">{{ weapon.stats.epic.DPS }}</td>
+                        <td class="legendary d-none">{{ weapon.stats.legendary.DPS }}</td>
+                      </tr>
+                      <tr>
+                        <td>Dmg</td>
+                        <td class="common">{{ weapon.stats.common.Dmg }}</td>
+                        <td class="uncommon d-none">{{ weapon.stats.uncommon.Dmg }}</td>
+                        <td class="rare d-none">{{ weapon.stats.rare.Dmg }}</td>
+                        <td class="epic d-none">{{ weapon.stats.epic.Dmg }}</td>
+                        <td class="legendary d-none">{{ weapon.stats.legendary.Dmg }}</td>
+                      </tr>
+                      <tr>
+                        <td>Struct Dmg</td>
+                        <td class="common">{{ weapon.stats.common["Struct Dmg"] }}</td>
+                        <td class="uncommon d-none">{{ weapon.stats.uncommon["Struct Dmg"] }}</td>
+                        <td class="rare d-none">{{ weapon.stats.rare["Struct Dmg"] }}</td>
+                        <td class="epic d-none">{{ weapon.stats.epic["Struct Dmg"] }}</td>
+                        <td class="legendary d-none">{{ weapon.stats.legendary["Struct Dmg"] }}</td>
+                      </tr>
+                      <tr>
+                        <td>Fire Rate</td>
+                        <td class="common">{{ weapon.stats.common["Fire Rate"] }}</td>
+                        <td class="uncommon d-none">{{ weapon.stats.uncommon["Fire Rate"] }}</td>
+                        <td class="rare d-none">{{ weapon.stats.rare["Fire Rate"] }}</td>
+                        <td class="epic d-none">{{ weapon.stats.epic["Fire Rate"] }}</td>
+                        <td class="legendary d-none">{{ weapon.stats.legendary["Fire Rate"] }}</td>
+                      </tr>
+                      <tr>
+                        <td>Mag Size</td>
+                        <td class="common">{{ weapon.stats.common["Mag Size"] }}</td>
+                        <td class="uncommon d-none">{{ weapon.stats.uncommon["Mag Size"] }}</td>
+                        <td class="rare d-none">{{ weapon.stats.rare["Mag Size"] }}</td>
+                        <td class="epic d-none">{{ weapon.stats.epic["Mag Size"] }}</td>
+                        <td class="legendary d-none">{{ weapon.stats.legendary["Mag Size"] }}</td>
+                      </tr>
+                      <tr>
+                        <td>Reload</td>
+                        <td class="common">{{ weapon.stats.common.Reload }}</td>
+                        <td class="uncommon d-none">{{ weapon.stats.uncommon.Reload }}</td>
+                        <td class="rare d-none">{{ weapon.stats.rare.Reload }}</td>
+                        <td class="epic d-none">{{ weapon.stats.epic.Reload }}</td>
+                        <td class="legendary d-none">{{ weapon.stats.legendary.Reload }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/weapons.js') }}"></script>
+{% endblock %}

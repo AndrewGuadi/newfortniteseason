@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Nitro Fists",
+    "description": "Description for Nitro Fists.",
+    "image": "weapons/nitro_fists.webp",
+    "stats": {
+      "common": {"DPS": 145, "Dmg": 29, "Struct Dmg": 29, "Fire Rate": 5, "Mag Size": 28, "Reload": 2.75},
+      "uncommon": {"DPS": 150, "Dmg": 30, "Struct Dmg": 30, "Fire Rate": 5, "Mag Size": 28, "Reload": 2.70},
+      "rare": {"DPS": 155, "Dmg": 31, "Struct Dmg": 31, "Fire Rate": 5, "Mag Size": 28, "Reload": 2.65},
+      "epic": {"DPS": 160, "Dmg": 32, "Struct Dmg": 32, "Fire Rate": 5, "Mag Size": 28, "Reload": 2.60},
+      "legendary": {"DPS": 165, "Dmg": 33, "Struct Dmg": 33, "Fire Rate": 5, "Mag Size": 28, "Reload": 2.55}
+    }
+  },
+  {
+    "name": "Boom Bolt",
+    "description": "Description for Boom Bolt.",
+    "image": "weapons/boom_bolt.jpg",
+    "stats": {
+      "common": {"DPS": 140, "Dmg": 27, "Struct Dmg": 27, "Fire Rate": 5, "Mag Size": 25, "Reload": 2.80},
+      "uncommon": {"DPS": 145, "Dmg": 28, "Struct Dmg": 28, "Fire Rate": 5, "Mag Size": 25, "Reload": 2.75},
+      "rare": {"DPS": 150, "Dmg": 29, "Struct Dmg": 29, "Fire Rate": 5, "Mag Size": 25, "Reload": 2.70},
+      "epic": {"DPS": 155, "Dmg": 30, "Struct Dmg": 30, "Fire Rate": 5, "Mag Size": 25, "Reload": 2.65},
+      "legendary": {"DPS": 160, "Dmg": 31, "Struct Dmg": 31, "Fire Rate": 5, "Mag Size": 25, "Reload": 2.60}
+    }
+  },
+  {
+    "name": "Machinist Combat",
+    "description": "Description for Machinist Combat.",
+    "image": "weapons/machinist_combat.webp",
+    "stats": {
+      "common": {"DPS": 135, "Dmg": 25, "Struct Dmg": 25, "Fire Rate": 5, "Mag Size": 30, "Reload": 2.85},
+      "uncommon": {"DPS": 140, "Dmg": 26, "Struct Dmg": 26, "Fire Rate": 5, "Mag Size": 30, "Reload": 2.80},
+      "rare": {"DPS": 145, "Dmg": 27, "Struct Dmg": 27, "Fire Rate": 5, "Mag Size": 30, "Reload": 2.75},
+      "epic": {"DPS": 150, "Dmg": 28, "Struct Dmg": 28, "Fire Rate": 5, "Mag Size": 30, "Reload": 2.70},
+      "legendary": {"DPS": 155, "Dmg": 29, "Struct Dmg": 29, "Fire Rate": 5, "Mag Size": 30, "Reload": 2.65}
+    }
+  },
+  {
+    "name": "Megalo Don's Nitro Fists",
+    "description": "Description for Megalo Don's Nitro Fists.",
+    "image": "megalo_dons_nitro_fists.png",
+    "stats": {
+      "common": {"DPS": 150, "Dmg": 30, "Struct Dmg": 30, "Fire Rate": 5, "Mag Size": 27, "Reload": 2.70},
+      "uncommon": {"DPS": 155, "Dmg": 31, "Struct Dmg": 31, "Fire Rate": 5, "Mag Size": 27, "Reload": 2.65},
+      "rare": {"DPS": 160, "Dmg": 32, "Struct Dmg": 32, "Fire Rate": 5, "Mag Size": 27, "Reload": 2.60},
+      "epic": {"DPS": 165, "Dmg": 33, "Struct Dmg": 33, "Fire Rate": 5, "Mag Size": 27, "Reload": 2.55},
+      "legendary": {"DPS": 170, "Dmg": 34, "Struct Dmg": 34, "Fire Rate": 5, "Mag Size": 27, "Reload": 2.50}
+    }
+  },
+  {
+    "name": "Ringmasters Boom Bolt",
+    "description": "Description for Ringmasters Boom Bolt.",
+    "image": "ringmasters_boom_bolt.png",
+    "stats": {
+      "common": {"DPS": 160, "Dmg": 32, "Struct Dmg": 32, "Fire Rate": 5, "Mag Size": 29, "Reload": 2.65},
+      "uncommon": {"DPS": 165, "Dmg": 33, "Struct Dmg": 33, "Fire Rate": 5, "Mag Size": 29, "Reload": 2.60},
+      "rare": {"DPS": 170, "Dmg": 34, "Struct Dmg": 34, "Fire Rate": 5, "Mag Size": 29, "Reload": 2.55},
+      "epic": {"DPS": 175, "Dmg": 35, "Struct Dmg": 35, "Fire Rate": 5, "Mag Size": 29, "Reload": 2.50},
+      "legendary": {"DPS": 180, "Dmg": 36, "Struct Dmg": 36, "Fire Rate": 5, "Mag Size": 29, "Reload": 2.45}
+    }
+  }
+]

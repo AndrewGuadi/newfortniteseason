@@ -1,5 +1,6 @@
-from flask import Flask, render_template, Response, url_for
+from flask import Flask, render_template, Response, url_for, jsonify
 from datetime import datetime
+import json
 
 app = Flask(__name__)
 
@@ -35,6 +36,13 @@ def epic():
 def shop():
     return render_template('shop.html')
 
+@app.route('/weapons')
+def weapons():
+    weapons_path = '/workspaces/newfortniteseason/static/data/weapons.json'
+    with open(weapons_path, "r", encoding='utf-8') as f:
+        weapons_data = json.load(f)
+    return render_template('weapons.html', weapons=weapons_data)
+
 @app.route('/sitemap.xml')
 def sitemap():
     pages = []
@@ -53,3 +61,4 @@ def sitemap():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
