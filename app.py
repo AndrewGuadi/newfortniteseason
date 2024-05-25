@@ -38,10 +38,14 @@ def shop():
 
 @app.route('/weapons')
 def weapons():
+    items_path = '/workspaces/newfortniteseason/static/data/items.json'
+    with open(items_path) as f:
+        items_data = json.load(f)
+
     weapons_path = '/workspaces/newfortniteseason/static/data/weapons.json'
     with open(weapons_path, "r", encoding='utf-8') as f:
         weapons_data = json.load(f)
-    return render_template('weapons.html', weapons=weapons_data)
+    return render_template('weapons.html', weapons=weapons_data, items=items_data)
 
 @app.route('/sitemap.xml')
 def sitemap():

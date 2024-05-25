@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Health Pack",
+      "description": "Restores health over time.",
+      "image": "items/health_kit.jpeg",
+      "stats": {
+        "common": {"Heal": 50, "Duration": 5, "Cooldown": 20},
+        "uncommon": {"Heal": 55, "Duration": 4.5, "Cooldown": 18},
+        "rare": {"Heal": 60, "Duration": 4, "Cooldown": 16},
+        "epic": {"Heal": 65, "Duration": 3.5, "Cooldown": 14},
+        "legendary": {"Heal": 70, "Duration": 3, "Cooldown": 12}
+      }
+    },
+    {
+      "name": "Shield Potion",
+      "description": "Provides a shield to absorb damage.",
+      "image": "items/shield_potion.webp",
+      "stats": {
+        "common": {"Shield": 50, "Duration": 5, "Cooldown": 20},
+        "uncommon": {"Shield": 55, "Duration": 4.5, "Cooldown": 18},
+        "rare": {"Shield": 60, "Duration": 4, "Cooldown": 16},
+        "epic": {"Shield": 65, "Duration": 3.5, "Cooldown": 14},
+        "legendary": {"Shield": 70, "Duration": 3, "Cooldown": 12}
+      }
+    }
+  ]
+  
