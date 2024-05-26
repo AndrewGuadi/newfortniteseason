@@ -13,28 +13,28 @@
 
 {% block content %}
 <div class="container mt-5" id="main">
-  <div class="skins-container p-3 bg-dark rounded">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h1 class="fs-1">Fortnite Season 5 Chapter 3 - Skins</h1>
-        <ul class="nav nav-tabs justify-content-center mt-4" id="categoryTab" role="tablist">
-          {% for category in skins %}
-          <li class="nav-item" role="presentation">
-            <a class="nav-link {% if loop.first %}active{% endif %}" id="category-tab-{{ loop.index0 }}" data-bs-toggle="tab" href="#category-{{ loop.index0 }}" role="tab" aria-controls="category-{{ loop.index0 }}" aria-selected="{{ 'true' if loop.first else 'false' }}">{{ category.category }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+  <div class="skins-container p-4 bg-dark rounded">
+    <h1 class="text-center fs-1 mb-4">Fortnite Season 5 Chapter 3 - Skins</h1>
+    <ul class="nav nav-tabs justify-content-center" id="categoryTab" role="tablist">
+      {% for category in skins %}
+      <li class="nav-item" role="presentation">
+        <a class="nav-link {% if loop.first %}active{% endif %}" id="category-tab-{{ loop.index0 }}" data-bs-toggle="tab" href="#category-{{ loop.index0 }}" role="tab" aria-controls="category-{{ loop.index0 }}" aria-selected="{{ 'true' if loop.first else 'false' }}">{{ category.category }}</a>
+      </li>
+      {% endfor %}
+    </ul>
     <div class="tab-content mt-4" id="categoryTabContent">
       {% for category in skins %}
       <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="category-{{ loop.index0 }}" role="tabpanel" aria-labelledby="category-tab-{{ loop.index0 }}">
-        <div class="row justify-content-center">
+        <div class="row">
           {% for skin in category.skins %}
           <div class="col-md-6 col-lg-4 mb-4">
-            <h3 class="fs-3">{{ skin.name }}</h3>
-            <img src="{{ url_for('static', filename='img/' + skin.image) }}" alt="{{ skin.name }}" class="img-fluid mb-3 standardized-image">
-            <p class="fs-4">{{ skin.description }}</p>
+            <div class="card bg-secondary text-white h-100">
+              <img src="{{ url_for('static', filename='img/' + skin.image) }}" class="card-img-top standardized-image" alt="{{ skin.name }}">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title fs-3">{{ skin.name }}</h3>
+                <p class="card-text fs-4">{{ skin.description }}</p>
+              </div>
+            </div>
           </div>
           {% endfor %}
         </div>
