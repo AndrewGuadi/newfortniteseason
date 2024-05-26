@@ -25,8 +25,8 @@ h1, h2, h3 {
 }
 
 .nav-tabs .nav-link.active {
-    background-color: #343a40;
-    border-color: #343a40;
+    background-color: #ffffff;
+    border-color: #000000;
 }
 
 .card {

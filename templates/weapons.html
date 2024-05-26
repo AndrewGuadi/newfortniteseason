@@ -162,12 +162,10 @@
                           </tr>
                         </thead>
                         <tbody id="stats-body-item-{{ loop.index0 }}">
-                          {% for stat, value in item.stats.common.items() %}
                           <tr>
-                            <td>{{ stat }}</td>
-                            <td class="common">{{ value }}</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
                           </tr>
-                          {% endfor %}
                         </tbody>
                       </table>
                     </div>
@@ -191,3 +189,4 @@
 </script>
 <script src="{{ url_for('static', filename='js/weapons.js') }}"></script>
 {% endblock %}
+

@@ -1,27 +1,17 @@
 [
-    {
-      "name": "Health Pack",
-      "description": "Restores health over time.",
-      "image": "items/health_kit.jpeg",
-      "stats": {
-        "common": {"Heal": 50, "Duration": 5, "Cooldown": 20},
-        "uncommon": {"Heal": 55, "Duration": 4.5, "Cooldown": 18},
-        "rare": {"Heal": 60, "Duration": 4, "Cooldown": 16},
-        "epic": {"Heal": 65, "Duration": 3.5, "Cooldown": 14},
-        "legendary": {"Heal": 70, "Duration": 3, "Cooldown": 12}
-      }
-    },
-    {
-      "name": "Shield Potion",
-      "description": "Provides a shield to absorb damage.",
-      "image": "items/shield_potion.webp",
-      "stats": {
-        "common": {"Shield": 50, "Duration": 5, "Cooldown": 20},
-        "uncommon": {"Shield": 55, "Duration": 4.5, "Cooldown": 18},
-        "rare": {"Shield": 60, "Duration": 4, "Cooldown": 16},
-        "epic": {"Shield": 65, "Duration": 3.5, "Cooldown": 14},
-        "legendary": {"Shield": 70, "Duration": 3, "Cooldown": 12}
-      }
-    }
-  ]
-  
+  {
+      "name": "Repair Torch",
+      "description": "Is the health of your car low? Hit a Repair Box or take matters into your own hands with the unvaulted Repair Torch! A Repair Torch can also fix a popped tire or broken window.",
+      "image": "items/repair_torch.jpg"
+  },
+  {
+      "name": "Nuka-Cola",
+      "description": "The wasteland is a pretty apocalyptic place… like there was some kind of falling out. Indulge yourself in these trying times with a nice cold bottle of Nuka-Cola! Restore a bit of Health, and over time, some Shield.",
+      "image": "items/nuka_cola.jpg"
+  },
+  {
+      "name": "Slurp Cactus",
+      "description": "Remember: it’s not the wasteland itself that’s oppressive — it’s the infamous Warriors. Pickaxe a Slurp Cactus to splash healing cactus fruit around you! Don’t want to get out of your car? Drive through the cactus to heal yourself AND your vehicle.",
+      "image": "items/slurp_cactus.jpg"
+  }
+]
