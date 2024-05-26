@@ -18,7 +18,14 @@ def skins():
 
 @app.route('/vehicles')
 def vehicles():
-    return render_template('vehicles.html')
+    with open('/workspaces/newfortniteseason/static/data/vehicle_mods.json') as f:
+        vehicle_mods = json.load(f)
+    
+    with open('/workspaces/newfortniteseason/static/data/mod_boxes.json') as f:
+        mod_boxes = json.load(f)
+
+    return render_template('vehicles.html', vehicle_mods=vehicle_mods, mod_boxes=mod_boxes)
+
 
 @app.route('/emotes')
 def emotes():

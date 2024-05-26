@@ -13,30 +13,55 @@
 
 {% block content %}
 <div class="container mt-5" id="main">
-  <div class="vehicles-container text-center p-3 bg-dark rounded">
-    <h1 class="fs-1">New Vehicles in Season 5 Chapter 3</h1>
-    <p class="fs-4">Discover the latest vehicles in Fortnite Season 5 Chapter 3. This season brings a variety of new rides, each with unique abilities and features.</p>
-    <img src="/static/img/vehicles-header.png" alt="Season 5 Vehicles" class="img-fluid mt-3 mb-4">
-    <h2 class="fs-2">Featured Vehicles</h2>
-    <p class="fs-4">Navigate the post-apocalyptic world with these new vehicles, from rugged off-roaders to high-speed racers.</p>
-    <div class="vehicle-list mt-4">
-      <div class="vehicle-item mb-4">
-        <h3 class="fs-3">Vehicle Attachments</h3>
-        <p class="fs-4">Leaks suggest that vehicle attachments will be introduced in Season 3. These attachments could drastically change gameplay by allowing players to modify their vehicles. While weapon modifications were already introduced at the start of Chapter 5, vehicles did not receive such special upgrades until now. With these attachments, players might be able to enhance their vehicles in unique ways, such as adding mounted guns or other features.</p>
-      </div>
-      <div class="vehicle-item mb-4">
-        <h3 class="fs-3">Mobility Items</h3>
-        <p class="fs-4">Epic Games has teased the return of some classic mobility items for Season 3. These include:</p>
-        <ul class="fs-4 text-start">
-          <li><strong>Impulse Grenade:</strong> Known for its ability to provide extra air time and annoy opponents, the Impulse Grenade could make a comeback.</li>
-          <li><strong>Crash Pad:</strong> A versatile item that can deflect rockets, grenades, and even be thrown while in freefall, saving players from fall damage.</li>
-          <li><strong>Bounder:</strong> Although less commonly used, the Bounder provides unique mobility options and could also return.</li>
+  <div class="vehicles-container p-3 bg-dark rounded">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="fs-1">Fortnite Season 5 Chapter 3 - Vehicles</h1>
+        <ul class="nav nav-tabs justify-content-center mt-4" id="categoryTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="mods-tab" data-bs-toggle="tab" href="#mods" role="tab" aria-controls="mods" aria-selected="true">Vehicle Mods</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="mod-boxes-tab" data-bs-toggle="tab" href="#mod-boxes" role="tab" aria-controls="mod-boxes" aria-selected="false">Mod Boxes</a>
+          </li>
         </ul>
-        <p class="fs-4">Having these mobility items available is crucial for navigating the large Fortnite map efficiently, especially in a post-apocalyptic setting like the one hinted at in Season 3.</p>
       </div>
-      <div class="vehicle-item mb-4">
-        <h3 class="fs-3">Apocalyptic Theme</h3>
-        <p class="fs-4">Rumors and speculation suggest that Season 3 will feature an apocalyptic theme. Voice lines from The Oracle, a character in the current season, hint at impending doom, black skies, and choking dust. There may be a war brewing between Greek gods and those who oppose them, adding to the apocalyptic vibe.</p>
+    </div>
+    <div class="tab-content mt-4" id="categoryTabContent">
+      <!-- Vehicle Mods Content -->
+      <div class="tab-pane fade show active" id="mods" role="tabpanel" aria-labelledby="mods-tab">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="fs-2">Vehicle Mods</h2>
+            <p class="fs-4">Players can now upgrade their vehicles with various mods, turning them into formidable weapons. Here are the available mods:</p>
+            <div class="row justify-content-center">
+              {% for mod in vehicle_mods %}
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h3 class="fs-3">{{ mod.name }}</h3>
+                <img src="{{ url_for('static', filename='img/' + mod.image) }}" alt="{{ mod.name }}" class="img-fluid mb-3 standardized-image">
+                <p class="fs-4">{{ mod.description }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mod Boxes Content -->
+      <div class="tab-pane fade" id="mod-boxes" role="tabpanel" aria-labelledby="mod-boxes-tab">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="fs-2">Mod Boxes</h2>
+            <p class="fs-4">There are seven Mod Boxes in Fortnite Chapter 5 Season 3. When rammed by a car, they automatically attach specific mods to your vehicle:</p>
+            <div class="row justify-content-center">
+              {% for box in mod_boxes %}
+              <div class="col-md-6 col-lg-4 mb-4">
+                <h3 class="fs-3">{{ box.name }}</h3>
+                <img src="{{ url_for('static', filename='img/' + box.image) }}" alt="{{ box.name }}" class="img-fluid mb-3 standardized-image">
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -46,3 +71,4 @@
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/vehicles.js') }}"></script>
 {% endblock %}
+

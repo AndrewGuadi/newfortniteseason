@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Machine Gun Turret",
+        "description": "Attach this to the roof slot of your vehicle to fire machine gun rounds similar to a Minigun.",
+        "image": "vehicles/machine_turret.webp"
+    },
+    {
+        "name": "Grenade Launcher Turret",
+        "description": "Also attachable to the roof slot, it fires grenades and deals explosive damage.",
+        "image": "vehicles/grenade_turret.jpeg"
+    },
+    {
+        "name": "Spiked Bumper",
+        "description": "Attach this to the front bumper slot to deal more damage to players and objects on impact.",
+        "image": "vehicles/spiked_bumper.webp"
+    },
+    {
+        "name": "Cow Catcher",
+        "description": "Boost your ramming power and give your car some defensive armor by attaching this to the front bumper slot.",
+        "image": "vehicles/cow_catcher.jpeg"
+    },
+    {
+        "name": "Bulletproof Tires",
+        "description": "Attach these to the tires slot to make your tires indestructible.",
+        "image": "vehicles/bulletproof_tires.webp"
+    },
+    {
+        "name": "Chonkers Off-Road Tires",
+        "description": "These tires enhance off-road performance for your vehicle.",
+        "image": "vehicles/offroad_tires.jpeg"
+    }
+]
