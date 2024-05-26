@@ -14,7 +14,10 @@ def theme():
 
 @app.route('/skins')
 def skins():
-    return render_template('skins.html')
+    with open('/workspaces/newfortniteseason/static/data/skins.json') as f:
+        skins = json.load(f)
+
+    return render_template('skins.html', skins=skins)
 
 @app.route('/vehicles')
 def vehicles():

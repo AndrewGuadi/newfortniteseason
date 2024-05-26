@@ -1,26 +1,3 @@
 [
-    {
-        "name": "Machine Gun Turret Box",
-        "image": "vehicles/machine_gun_turret_box.png"
-    },
-    {
-        "name": "Grenade Launcher Turret Box",
-        "image": "vehicles/grenade_launcher_turret_box.png"
-    },
-    {
-        "name": "Spiked Bumper Box",
-        "image": "vehicles/spiked_bumper_box.png"
-    },
-    {
-        "name": "Cow Catcher Box",
-        "image": "vehicles/cow_catcher_box.png"
-    },
-    {
-        "name": "Bulletproof Tires Box",
-        "image": "vehicles/bulletproof_tires_box.png"
-    },
-    {
-        "name": "Chonkers Off-Road Tires Box",
-        "image": "vehicles/chonkers_offroad_tires_box.png"
-    }
+
 ]

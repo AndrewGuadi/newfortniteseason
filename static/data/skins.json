@@ -1,0 +1,47 @@
+[
+    {
+        "category": "Brotherhood of Steel Power Armor Skins",
+        "skins": [
+            {
+                "name": "T-60 Power Armor",
+                "description": "Inspired by the Fallout series, this skin transforms your character into a member of the iconic Brotherhood of Steel. Unlock it by progressing through the Battle Pass tiers.",
+                "image": "skins/t60_power_armor.jpeg"
+            },
+            {
+                "name": "Black Knight Variant",
+                "description": "Another Power Armor skin with a rugged, battle-ready appearance.",
+                "image": "skins/black_knight.jpg"
+            }
+        ]
+    },
+    {
+        "category": "Magneto Skin",
+        "skins": [
+            {
+                "name": "Magneto",
+                "description": "Magneto, the master of magnetism from Marvel’s X-Men, is part of the Battle Pass. Unlock it by reaching a specific tier in the Battle Pass progression.",
+                "image": "skins/magneto.jpeg"
+            }
+        ]
+    },
+    {
+        "category": "Wrecked Crew Skins",
+        "skins": [
+            {
+                "name": "The Machinist",
+                "description": "A female character with punk hair and Nitro tubes fixed around her arms.",
+                "image": "skins/machinist.jpeg"
+            },
+            {
+                "name": "Ringmaster",
+                "description": "A racer-themed skin wearing a full-face motorbike helmet.",
+                "image": "skins/ringmaster.jpeg"
+            },
+            {
+                "name": "Rust",
+                "description": "A mutant skin with a rugged, post-apocalyptic look.",
+                "image": "skins/rust.jpeg"
+            }
+        ]
+    }
+]
