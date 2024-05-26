@@ -1,47 +1,85 @@
-[
-    {
-        "category": "Brotherhood of Steel Power Armor Skins",
-        "skins": [
-            {
-                "name": "T-60 Power Armor",
-                "description": "Inspired by the Fallout series, this skin transforms your character into a member of the iconic Brotherhood of Steel. Unlock it by progressing through the Battle Pass tiers.",
-                "image": "skins/t60_power_armor.jpeg"
-            },
-            {
-                "name": "Black Knight Variant",
-                "description": "Another Power Armor skin with a rugged, battle-ready appearance.",
-                "image": "skins/black_knight.jpg"
-            }
-        ]
-    },
-    {
-        "category": "Magneto Skin",
-        "skins": [
-            {
-                "name": "Magneto",
-                "description": "Magneto, the master of magnetism from Marvel’s X-Men, is part of the Battle Pass. Unlock it by reaching a specific tier in the Battle Pass progression.",
-                "image": "skins/magneto.jpeg"
-            }
-        ]
-    },
-    {
-        "category": "Wrecked Crew Skins",
-        "skins": [
-            {
-                "name": "The Machinist",
-                "description": "A female character with punk hair and Nitro tubes fixed around her arms.",
-                "image": "skins/machinist.jpeg"
-            },
-            {
-                "name": "Ringmaster",
-                "description": "A racer-themed skin wearing a full-face motorbike helmet.",
-                "image": "skins/ringmaster.jpeg"
-            },
-            {
-                "name": "Rust",
-                "description": "A mutant skin with a rugged, post-apocalyptic look.",
-                "image": "skins/rust.jpeg"
-            }
-        ]
-    }
-]
+{
+    "battle_pass": [
+        {
+            "name": "Megalo Don",
+            "description": "A fierce new skin featuring the Megalo Don look, part of the Battle Pass.",
+            "image": "skins/megalo_don.jpg"
+        },
+        {
+            "name": "Pastel Brite Raider",
+            "description": "Bright and colorful, the Pastel Brite Raider is ready to take on any challenge.",
+            "image": "skins/pastel_brite_raider.jpg"
+        },
+        {
+            "name": "Get Nitrod",
+            "description": "Get ready to race with the Get Nitrod skin, featuring high-octane details.",
+            "image": "skins/get_nitrod.jpg"
+        },
+        {
+            "name": "Cobalt Burn Machinist",
+            "description": "The Cobalt Burn Machinist is equipped with advanced tech and a fierce attitude.",
+            "image": "skins/cobalt_burn_machinist.jpg"
+        },
+        {
+            "name": "The Machinist",
+            "description": "A skilled engineer, The Machinist is ready for any challenge.",
+            "image": "skins/the_machinist.jpg"
+        },
+        {
+            "name": "Brite Raider",
+            "description": "Brite Raider brings a splash of color to the battlefield.",
+            "image": "skins/brite_raider.jpg"
+        },
+        {
+            "name": "Rust",
+            "description": "Shred the wasteland with style using the Rust skin.",
+            "image": "skins/rust.jpg"
+        },
+        {
+            "name": "Hot Rod T60 Power Armor",
+            "description": "Hot Rod T60 Power Armor brings a fiery new look to the classic armor.",
+            "image": "skins/t60_power_armor.jpg"
+        },
+        {
+            "name": "Slap Peabody",
+            "description": "Featuring characters named Phil, Earl, and Axle, Slap Peabody brings a playful vibe.",
+            "image": "skins/slap_peabody.jpg"
+        },
+        {
+            "name": "Corrosive Rust",
+            "description": "Corrosive Rust adds a toxic twist to the classic Rust look.",
+            "image": "skins/corrosive_rust.jpg"
+        }
+    ],
+    "bonus_battle_pass": [
+        {
+            "name": "Black Knight T60 Power Armor",
+            "description": "The Black Knight T60 Power Armor combines medieval aesthetics with futuristic tech.",
+            "image": "skins/t60_black_knight.jpg"
+        },
+        {
+            "name": "Night Hunter Scarr",
+            "description": "Night Hunter Scarr is a deadly predator of the night.",
+            "image": "skins/night_hunter_scarr.jpg"
+        }
+    ],
+    "magneto_quests": [
+        {
+            "name": "Wasteland Magneto",
+            "description": "Wasteland Magneto brings the master of magnetism to the desolate landscapes.",
+            "image": "skins/wasteland_magneto.jpg"
+        }
+    ],
+    "quest_rewards": [
+        {
+            "name": "Nitro Flare Machinist",
+            "description": "The Nitro Flare Machinist is ready to ignite the battlefield.",
+            "image": "skins/nitro_flare_machinist.jpg"
+        },
+        {
+            "name": "Oxide Rust",
+            "description": "Oxide Rust adds a new layer of decay to the classic Rust skin.",
+            "image": "skins/oxide_rust.jpg"
+        }
+    ]
+}
