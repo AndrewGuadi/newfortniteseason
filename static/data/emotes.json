@@ -3,34 +3,34 @@
         "category": "Battle Pass Emotes",
         "emotes": [
             {
-                "name": "I’m A Mystery Dance Emote",
-                "description": "This enigmatic dance is part of the Chapter 5 Battle Pass. It’s perfect for those who love a touch of mystery and intrigue.",
-                "image": "emotes/im_a_mystery_dance.png"
+                "name": "Brite Moves",
+                "description": "Show off your colorful dance moves with the Brite Moves emote.",
+                "image": "emotes/brite_moves.jpg"
             },
             {
-                "name": "Surfin’ Bird Emote",
-                "description": "Inspired by the classic song 'Surfin’ Bird' by The Trashmen, this emote lets your character groove to the catchy tune.",
-                "image": "emotes/surfin_bird.png"
-            }
-        ]
-    },
-    {
-        "category": "Unlocked Emotes",
-        "emotes": [
-            {
-                "name": "The Machinist Emote",
-                "description": "Unlocked right away, this emote allows you to control your fire.",
-                "image": "emotes/the_machinist.png"
+                "name": "Codsworth's Cleanup",
+                "description": "Clean up the wasteland with the Codsworth's Cleanup emote.",
+                "image": "emotes/codsworths_cleanup.jpg"
             },
             {
-                "name": "Rust Emote",
-                "description": "Shred the wasteland with style using the Rust emote.",
-                "image": "emotes/rust.png"
+                "name": "Fire Show",
+                "description": "Light up the battlefield with the Fire Show emote.",
+                "image": "emotes/fire_show.jpg"
             },
             {
-                "name": "Peabody Emote",
-                "description": "Featuring characters named Phil, Earl, and Axle, the Peabody emote brings a playful vibe to your dance repertoire.",
-                "image": "emotes/peabody.png"
+                "name": "Make a Seat",
+                "description": "Take a break and relax with the Make a Seat emote.",
+                "image": "emotes/make_a_seat.jpg"
+            },
+            {
+                "name": "Wasteland Rock",
+                "description": "Rock out in the wasteland with the Wasteland Rock emote.",
+                "image": "emotes/wasteland_rock.jpg"
+            },
+            {
+                "name": "Pea-Part Harmony",
+                "description": "Join the harmonious Pea-Part with Phil, Earl, and Axle.",
+                "image": "emotes/pea_part_harmony.jpg"
             }
         ]
     }
