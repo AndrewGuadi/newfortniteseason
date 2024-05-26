@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-<meta name="description" content="Discover the new emotes introduced in Fortnite Season 5 Chapter 3. Express yourself with the latest dance moves and gestures.">
+<meta name="description" content="Explore the new emotes introduced in Fortnite Season 5 Chapter 3. Find out which new dance moves you can use and collect.">
 <meta name="keywords" content="Fortnite, Season 5 Chapter 3, Fortnite Emotes, New Emotes">
 {% endblock %}
 
@@ -13,12 +13,34 @@
 
 {% block content %}
 <div class="container mt-5" id="main">
-  <div class="emotes-container text-center p-3 bg-dark rounded">
-    <h1 class="fs-1">New Emotes in Season 5 Chapter 3</h1>
-    <p class="fs-4">Check out the latest emotes in Fortnite Season 5 Chapter 3. Show off your dance moves and unique expressions.</p>
-    <img src="/static/img/emotes-header.png" alt="Season 5 Emotes" class="img-fluid mt-3 mb-4">
-    <h2 class="fs-2">Featured Emotes</h2>
-    <p class="fs-4">Collect and use new emotes to celebrate your victories and taunt your opponents in style.</p>
+  <div class="emotes-container p-4 bg-dark rounded">
+    <h1 class="text-center fs-1 mb-4">Fortnite Season 5 Chapter 3 - Emotes</h1>
+    <ul class="nav nav-tabs justify-content-center" id="categoryTab" role="tablist">
+      {% for category in emotes %}
+      <li class="nav-item" role="presentation">
+        <a class="nav-link {% if loop.first %}active{% endif %}" id="category-tab-{{ loop.index0 }}" data-bs-toggle="tab" href="#category-{{ loop.index0 }}" role="tab" aria-controls="category-{{ loop.index0 }}" aria-selected="{{ 'true' if loop.first else 'false' }}">{{ category.category }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="tab-content mt-4" id="categoryTabContent">
+      {% for category in emotes %}
+      <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="category-{{ loop.index0 }}" role="tabpanel" aria-labelledby="category-tab-{{ loop.index0 }}">
+        <div class="row">
+          {% for emote in category.emotes %}
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card bg-secondary text-white h-100">
+              <img src="{{ url_for('static', filename='img/' + emote.image) }}" class="card-img-top standardized-image" alt="{{ emote.name }}">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title fs-3">{{ emote.name }}</h3>
+                <p class="card-text fs-4">{{ emote.description }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}

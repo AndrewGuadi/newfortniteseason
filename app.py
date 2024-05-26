@@ -32,7 +32,10 @@ def vehicles():
 
 @app.route('/emotes')
 def emotes():
-    return render_template('emotes.html')
+    with open('/workspaces/newfortniteseason/static/data/emotes.json') as f:
+        emotes = json.load(f)
+
+    return render_template('emotes.html', emotes=emotes)
 
 @app.route('/guests')
 def guests():

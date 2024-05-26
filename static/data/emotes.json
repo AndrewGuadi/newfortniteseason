@@ -1,0 +1,37 @@
+[
+    {
+        "category": "Battle Pass Emotes",
+        "emotes": [
+            {
+                "name": "I’m A Mystery Dance Emote",
+                "description": "This enigmatic dance is part of the Chapter 5 Battle Pass. It’s perfect for those who love a touch of mystery and intrigue.",
+                "image": "emotes/im_a_mystery_dance.png"
+            },
+            {
+                "name": "Surfin’ Bird Emote",
+                "description": "Inspired by the classic song 'Surfin’ Bird' by The Trashmen, this emote lets your character groove to the catchy tune.",
+                "image": "emotes/surfin_bird.png"
+            }
+        ]
+    },
+    {
+        "category": "Unlocked Emotes",
+        "emotes": [
+            {
+                "name": "The Machinist Emote",
+                "description": "Unlocked right away, this emote allows you to control your fire.",
+                "image": "emotes/the_machinist.png"
+            },
+            {
+                "name": "Rust Emote",
+                "description": "Shred the wasteland with style using the Rust emote.",
+                "image": "emotes/rust.png"
+            },
+            {
+                "name": "Peabody Emote",
+                "description": "Featuring characters named Phil, Earl, and Axle, the Peabody emote brings a playful vibe to your dance repertoire.",
+                "image": "emotes/peabody.png"
+            }
+        ]
+    }
+]
