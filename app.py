@@ -45,6 +45,12 @@ def medallions():
     return render_template('medallions.html', medallions=medallions_data)
 
 
+@app.route('/pois')
+def pois():
+    with open('/workspaces/newfortniteseason/static/data/pois.json') as f:
+        pois_data = json.load(f)
+    return render_template('pois.html', pois=pois_data)
+
 @app.route('/guests')
 def guests():
     return render_template('guests.html')

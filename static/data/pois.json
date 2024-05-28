@@ -1,0 +1,75 @@
+[
+    {
+        "name": "Sandy Steppes",
+        "description": "Sandy Steppes is a Named Location in Fortnite: Battle Royale, that was added in Chapter 5: Season 3 to the island Helios. Sandy Steppes is the remains of a coastal village covered by the sand.",
+        "image": "pois/sandy_steppes.webp",
+        "details": {
+            "History": "Snooty Steppes was replaced by Sandy Steppes. Hope spawns here as a character.",
+            "Location": "S Pleasant Piazza, SW Nitrodrome",
+            "Type": "Named Location",
+            "Island": "Helios",
+            "Release":
+             "May 24th 2024",
+            "Owner": "The Underground",
+            "Loot": {
+                "Ammo Boxes": 38,
+                "Produce Boxes": 16,
+                "Vehicles": [
+                    "2x Victory Motors Whiplash",
+                    "3x Trailsmasher SUV"
+                ]
+            },
+            "AIs": ["Hope"]
+        }
+    },
+    {
+        "name": "Nitrodrome",
+        "description": "Nitrodrome is a Named Location in Fortnite: Battle Royale, that was added in Chapter 5: Season 3 to the island Helios. The Nitrodrome is a large stadium with several ramps and Vehicle Modifications owned by Ringmaster Scarr.",
+        "image": "pois/nitrodrome.jpeg",
+        "details": {
+            "History": "Nitrodrome was added. Ringmaster Scarr can be found here as an AI Boss.",
+            "Location": "SE Pleasant Piazza, W Mount Olympus",
+            "Type": "Named Location",
+            "Island": "Helios",
+            "Release": "May 24th 2024",
+            "Owner": "Wasteland Warriors",
+            "Loot": {
+                "Chests": "?",
+                "Vending Machines": "?",
+                "Ammo Boxes": "?",
+                "Produce Boxes": "?"
+            },
+            "AIs": ["Ringmaster Scarr"]
+        }
+    },
+    {
+        "name": "Brutal Beachehead",
+        "description": "Brutal Beachhead is a Named Location in Fortnite: Battle Royale, that was added in Chapter 5: Season 3 to the island Helios. Brutal Beachhead is a large metal ship shaped like a shark with several floors and Cargo Boxes.",
+        "image": "pois/brutal_beachhead.webp",
+        "details": {
+            "History": "Brutal Beachhead was added.",
+            "Location": "S Nitrodrome, SW Mount Olympus",
+            "Type": "Named Location",
+            "Island": "Helios",
+            "Release": "May 24th 2024",
+            "Owner": "Wasteland Warriors",
+            "AIs": ["Wasteland Grunts"],
+            "Vehicles": ["1x Trailsmasher SUV"]
+        }
+    },
+    {
+        "name": "Redline Rig",
+        "description": "Redline Rig is a Named Location in Fortnite: Battle Royale, that was added in Chapter 5: Season 3 to the island Helios. Redline Rig is a large mechanical oil rig fueled by Nitro.",
+        "image": "pois/redline_rig.webp",
+        "details": {
+            "History": "Redline Rig was added. The Machinist spawns here as an AI Boss.",
+            "Location": "SE Pleasant Piazza, E Sandy Steppes",
+            "Type": "Named Location",
+            "Island": "Helios",
+            "Release": "May 24th 2024",
+            "Owner": "The Machinist",
+            "AIs": ["The Machinist", "Wasteland Grunts"]
+        }
+    }
+]
+

@@ -1,0 +1,87 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/static/img/fornitenewseason.png');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin: 0;
+}
+
+.pois-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+.nav-tabs .nav-link {
+    color: white;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #ffffff;
+    border-color: #000000;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.standardized-image {
+    max-width: 300px; /* adjust as needed */
+    height: auto;
+}
+
+.fs-1 {
+    font-size: 2.5rem;
+}
+
+.fs-2 {
+    font-size: 2rem;
+}
+
+.fs-3 {
+    font-size: 1.75rem;
+}
+
+.fs-4 {
+    font-size: 1.25rem;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .nav-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-tabs .nav-item {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .pois-container {
+        padding: 10px;
+    }
+
+    .tab-pane .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .tab-pane .col-md-6,
+    .tab-pane .col-lg-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .tab-pane .img-fluid {
+        margin-bottom: 10px;
+    }
+}
