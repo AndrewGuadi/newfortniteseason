@@ -38,7 +38,33 @@
               <h3>Details</h3>
               <ul>
                 {% for key, value in poi.details.items() %}
-                <li><strong>{{ key }}:</strong> {{ value }}</li>
+                  <li><strong>{{ key }}:</strong> 
+                    {% if value is mapping %}
+                      <ul>
+                        {% for subkey, subvalue in value.items() %}
+                          <li><strong>{{ subkey }}:</strong> 
+                            {% if subvalue is iterable and subvalue is not string %}
+                              <ul>
+                                {% for item in subvalue %}
+                                  <li>{{ item }}</li>
+                                {% endfor %}
+                              </ul>
+                            {% else %}
+                              {{ subvalue }}
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% elif value is iterable and value is not string %}
+                      <ul>
+                        {% for item in value %}
+                          <li>{{ item }}</li>
+                        {% endfor %}
+                      </ul>
+                    {% else %}
+                      {{ value }}
+                    {% endif %}
+                  </li>
                 {% endfor %}
               </ul>
             </div>
