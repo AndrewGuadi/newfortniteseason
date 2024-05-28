@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<meta name="description" content="Discover the latest medallions introduced in Fortnite Chapter 5 Season 3. Learn about their benefits, locations, and how to use them.">
+<meta name="keywords" content="Fortnite, Chapter 5 Season 3, Medallions, Boss Drops, Game Guide, New Fortnite Medallions">
+{% endblock %}
+
+{% block title %}Fortnite Chapter 5 Season 3 - Medallions{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/medallions.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5" id="main">
+  <div class="medallions-container p-3 bg-dark rounded">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="fs-1">Fortnite Chapter 5 Season 3 - Medallions</h1>
+        <ul class="nav nav-tabs justify-content-center mt-4" id="categoryTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="general-info-tab" data-bs-toggle="tab" href="#general-info" role="tab" aria-controls="general-info" aria-selected="true">General Info</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="machinist-tab" data-bs-toggle="tab" href="#machinist" role="tab" aria-controls="machinist" aria-selected="false">The Machinist’s Medallion</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ringmaster-tab" data-bs-toggle="tab" href="#ringmaster" role="tab" aria-controls="ringmaster" aria-selected="false">Ringmaster Scarr’s Medallion</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="megalo-don-tab" data-bs-toggle="tab" href="#megalo-don" role="tab" aria-controls="megalo-don" aria-selected="false">Megalo Don’s Medallion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-content mt-4" id="categoryTabContent">
+      <div class="tab-pane fade show active" id="general-info" role="tabpanel" aria-labelledby="general-info-tab">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="fs-2">WHAT ARE MEDALLIONS?</h2>
+            <p class="fs-4">Medallions are boss drops that buff you in different ways. The Medallions in Fortnite Chapter 5 Season 3 are as follows:</p>
+            <ul class="fs-4">
+              <li>The Machinist’s Medallion regenerates shield over time.</li>
+              <li>Ringmaster Scarr’s Medallion gives infinite ammo and a small damage buff.</li>
+              <li>Megalo Don’s Medallion gives infinite nitro.</li>
+            </ul>
+            <p class="fs-4">Medallions do not take up inventory space, as they have their own respective slot in your bag (like gold does).</p>
+            <p class="fs-4">You can also use medallions to enter vaults that have their respective boss’ car inside, if the boss spawned in its respective point of interest.</p>
+
+            <h2 class="fs-2 mt-4">WHERE TO FIND MEDALLIONS IN FORTNITE CHAPTER 5 SEASON 3</h2>
+            <p class="fs-4">You can see the medallions just straight-up on the map. At the start of the game, the location of all three medallions will be marked on the map.</p>
+            <p class="fs-4">The bosses will either be in the set point of interest or riding around in a convoy around the map. You’ll be able to see their medallion icon moving around on the map. The set locations are as follows:</p>
+            <img src="{{ url_for('static', filename='img/medallions_map.png') }}" class="img-fluid my-3" alt="Medallions Map">
+            <p class="fs-4">A map of the Fortnite C5S3 island with the bosses marked.</p>
+            <p class="fs-4">Graphic: Julia Lee/Polygon | Source images: Epic Games via Polygon</p>
+            <p class="fs-4">Once you get on the battle bus, the emblems for the bosses should appear on your map. If The Machinist and Megalo Don aren’t in their respective POIs, then they’ll be riding around in an envoy with a battle bus and suped-up cars around them. Ringmaster Scarr requires you to stay in the Nitrodome for a set amount of time before she’ll appear to fight. You can also drive a vehicle through blue rings to lessen the amount of time you need to stay in the Nitrodome.</p>
+            <p class="fs-4">To get the medallion, you’ll need to eliminate the boss NPC holding it. If the boss you take out is at their POI, you’ll be able to go steal their specialized ride from a locked garage. (Similar to how keycards point you to where the vault is, the medallion will point you to where the car is.)</p>
+            <p class="fs-4">Unlike other NPCs who are pretty easy to drop on and eliminate immediately, these NPCs all have respawning lackies that’ll fire at you once they see you. That said, it may be easier to loot up around the named locations and then head in to nab a medallion.</p>
+            <p class="fs-4">Luckily, the NPCs shoot like Star Wars Storm Troopers (meaning that they aim very poorly), so you shouldn’t have to worry too much about the lackeys. Focus on the boss with a decent gun and you should be able to get a medallion. Note that the boss will replenish its shield frequently, making it an annoying target.</p>
+            <p class="fs-4">If you see an orange or gold circle on the map, this means a player in that vicinity has a medallion, too. You can eliminate that player to take their medallion.</p>
+          </div>
+        </div>
+      </div>
+
+      {% macro medallion_details(medallion) %}
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="fs-2">{{ medallion.name }}</h2>
+          <p class="fs-4">{{ medallion.power }}</p>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <img src="{{ url_for('static', filename='img/' + medallion.image) }}" alt="{{ medallion.name }}" class="img-fluid mb-3 standardized-image">
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <p class="fs-4"><strong>Location:</strong> {{ medallion.location }}</p>
+              <p class="fs-4"><strong>Associated Vehicle:</strong> {{ medallion.associated_vehicle }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endmacro %}
+
+      <div class="tab-pane fade" id="machinist" role="tabpanel" aria-labelledby="machinist-tab">
+        {% for medallion in medallions %}
+        {% if medallion.name == "The Machinist’s Medallion" %}
+          {{ medallion_details(medallion) }}
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="tab-pane fade" id="ringmaster" role="tabpanel" aria-labelledby="ringmaster-tab">
+        {% for medallion in medallions %}
+        {% if medallion.name == "Ringmaster Scarr’s Medallion" %}
+          {{ medallion_details(medallion) }}
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="tab-pane fade" id="megalo-don" role="tabpanel" aria-labelledby="megalo-don-tab">
+        {% for medallion in medallions %}
+        {% if medallion.name == "Megalo Don’s Medallion" %}
+          {{ medallion_details(medallion) }}
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/medallions.js') }}"></script>
+{% endblock %}
+

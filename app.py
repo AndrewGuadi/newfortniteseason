@@ -37,6 +37,14 @@ def emotes():
 
     return render_template('emotes.html', emotes=emotes)
 
+
+@app.route('/medallions')
+def medallions():
+    with open('/workspaces/newfortniteseason/static/data/medallions.json') as f:
+        medallions_data = json.load(f)
+    return render_template('medallions.html', medallions=medallions_data)
+
+
 @app.route('/guests')
 def guests():
     return render_template('guests.html')

@@ -1,0 +1,23 @@
+[
+    {
+        "name": "The Machinist’s Medallion",
+        "image": "medallions/machinist_medallion.png",
+        "power": "Regenerates shield over time.",
+        "location": "Machinist's POI or convoy",
+        "associated_vehicle": "Machinist's specialized ride"
+    },
+    {
+        "name": "Ringmaster Scarr’s Medallion",
+        "image": "medallions/ringmaster_medallion.png",
+        "power": "Gives infinite ammo and a small damage buff.",
+        "location": "Nitrodome",
+        "associated_vehicle": "Ringmaster's specialized ride"
+    },
+    {
+        "name": "Megalo Don’s Medallion",
+        "image": "medallions/megalo_don_medallion.png",
+        "power": "Gives infinite nitro.",
+        "location": "Megalo Don's POI or convoy",
+        "associated_vehicle": "Megalo Don's specialized ride"
+    }
+]
