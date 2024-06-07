@@ -93,6 +93,7 @@ def sitemap():
     sitemap_xml = render_template('sitemap_template.xml', pages=pages)
     return Response(sitemap_xml, mimetype='application/xml')
 
+##adding manual handling of transactions to keep users on the site
 @app.route('/webhook', methods=['POST'])
 def stripe_webhook():
     payload = request.get_data(as_text=True)
