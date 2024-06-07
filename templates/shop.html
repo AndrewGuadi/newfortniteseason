@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-<meta name="description" content="Visit the Fortnite Season 5 Chapter 3 Shop. Get exclusive merchandise and stay tuned for more products.">
+<meta name="description"
+  content="Visit the Fortnite Season 5 Chapter 3 Shop. Get exclusive merchandise and stay tuned for more products.">
 <meta name="keywords" content="Fortnite, Season 5 Chapter 3, Fortnite Shop, Merchandise">
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 {% endblock %}
 
 {% block title %}Fortnite Season 5 Chapter 3 - Shop{% endblock %}
@@ -16,24 +19,33 @@
   <div class="shop-container text-center p-3 bg-dark rounded">
     <h1 class="fs-1">Fortnite Season 5 Chapter 3 Shop</h1>
     <p class="fs-4">Explore exclusive Fortnite merchandise and gear up for the new season.</p>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert alert-success">
+      {% for message in messages %}
+      {{ message }}
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
     <div class="row mt-4">
       <div class="col-md-6">
         <div class="card">
-          <img src="/static/img/shirt1.webp" class="card-img-top" alt="Fortnite Shirt 1">
+          <img src="{{ url_for('static', filename='img/shirt1.webp') }}" class="card-img-top" alt="Fortnite Shirt 1">
           <div class="card-body">
             <h5 class="card-title">Llama Leisure - Winning in Style</h5>
             <p class="card-text">$19.99</p>
-            <a href="#" class="btn btn-primary">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card">
-          <img src="/static/img/shirt2.webp" class="card-img-top" alt="Fortnite Shirt 2">
-          <div class="card-body">
-            <h5 class="card-title">Cyber Warrior - Neon Nights</h5>
-            <p class="card-text">$19.99</p>
-            <a href="#" class="btn btn-primary">Buy Now</a>
+            <select id="size-select">
+              <option value="">Select Size</option>
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>
+            </select>
+            <a href="https://buy.stripe.com/test_8wMbLs4Wa6mkdxK000" target="_blank" id="payment-link" class="btn btn-primary" >Buy Now</a>
           </div>
         </div>
       </div>
@@ -44,5 +56,46 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ url_for('static', filename='js/shop.js') }}"></script>
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var submitButton = document.getElementById('payment-link');
+    submitButton.addEventListener('click', function(event) {
+      event.preventDefault();  // Prevent the default link behavior
+      submitOrder();
+    });
+  });
+  
+  function submitOrder() {
+    var sizeSelect = document.getElementById('size-select');
+    var selectedSize = sizeSelect.value;
+    if (selectedSize) {
+      fetch('/submit-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // Assuming csrf_token is stored in a meta tag for accessibility in JS
+          'X-CSRFToken': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+        body: JSON.stringify({ size: selectedSize })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        alert('Thank you for your order!');
+        console.log('Order submitted:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('There was a problem with your order.');
+      });
+    } else {
+      alert('Please select a size.');
+    }
+  }
+  </script>
+   -->
 {% endblock %}
