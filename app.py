@@ -1,9 +1,11 @@
-from flask import Flask, render_template, request, jsonify, flash, Response
+from flask import Flask, render_template, request, jsonify, flash, Response, url_for, redirect
 from flask_wtf.csrf import CSRFProtect
 import stripe
 import os
 import json
 from datetime import datetime
+from forms import CheckoutForm
+import stripe 
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -13,6 +15,8 @@ csrf = CSRFProtect(app)
 
 # Secret key for Flask session
 app.secret_key = os.urandom(24)
+stripe.api_key = os.getenv('testapikey')
+
 
 @app.route('/')
 def home():
@@ -62,9 +66,94 @@ def guests():
 def epic():
     return render_template('epic.html')
 
-@app.route('/shop')
+@app.route('/shop', methods=['GET', 'POST'])
 def shop():
-    return render_template('shop.html')
+    form = CheckoutForm()
+    if form.validate_on_submit():
+        # Define shipping rates
+        shipping_options = [
+            {
+                'shipping_rate_data': {
+                    'type': 'fixed_amount',
+                    'fixed_amount': {
+                        'amount': 699,  # Amount in cents
+                        'currency': 'usd'
+                    },
+                    'display_name': 'Ground Shipping',
+                    'delivery_estimate': {
+                        'minimum': {
+                            'unit': 'business_day',
+                            'value': 7
+                        },
+                        'maximum': {
+                            'unit': 'business_day',
+                            'value': 10
+                        }
+                    }
+                }
+            },
+            {
+                'shipping_rate_data': {
+                    'type': 'fixed_amount',
+                    'fixed_amount': {
+                        'amount': 1299,  # Amount in cents
+                        'currency': 'usd'
+                    },
+                    'display_name': 'Expedited Shipping',
+                    'delivery_estimate': {
+                        'minimum': {
+                            'unit': 'business_day',
+                            'value': 3
+                        },
+                        'maximum': {
+                            'unit': 'business_day',
+                            'value': 5
+                        }
+                    }
+                }
+            }
+        ]
+
+        # Create a new Stripe Checkout Session
+        session = stripe.checkout.Session.create(
+            payment_method_types=['card'],
+            line_items=[{
+                'price_data': {
+                    'currency': 'usd',
+                    'product_data': {
+                        'name': 'T-shirt',
+                    },
+                    'unit_amount': 2999,  # Amount in cents
+                },
+                'quantity': 1,
+            }],
+            mode='payment',
+            success_url='https://fuzzy-umbrella-wj647wrrp7p2w94-5000.app.github.dev/success?session_id={CHECKOUT_SESSION_ID}',
+            cancel_url=url_for('cancel', _external=True),
+            shipping_address_collection={
+                'allowed_countries': ['US']
+            },
+            shipping_options=shipping_options,
+            phone_number_collection={
+                "enabled": True
+            },
+            metadata={
+                'shirt_size': form.shirt_size.data,
+            }
+        )
+        return redirect(session.url, code=303)
+    return render_template('shop.html', form=form)
+
+@app.route('/success', methods=['GET', 'POST'])
+def success():
+    session_id = request.args.get('session_id')
+    session = stripe.checkout.Session.retrieve(session_id)
+    shirt_size = session.metadata['shirt_size']
+    return render_template('success.html', shirt_size=shirt_size)
+
+@app.route('/cancel', methods=['GET', 'POST'])
+def cancel():
+    return render_template('cancel.html')
 
 @app.route('/weapons')
 def weapons():
@@ -92,64 +181,6 @@ def sitemap():
 
     sitemap_xml = render_template('sitemap_template.xml', pages=pages)
     return Response(sitemap_xml, mimetype='application/xml')
-
-##adding manual handling of transactions to keep users on the site
-@app.route('/webhook', methods=['POST'])
-def stripe_webhook():
-    payload = request.get_data(as_text=True)
-    sig_header = request.headers.get('Stripe-Signature')
-
-    try:
-        event = stripe.Webhook.construct_event(
-            payload, sig_header, endpoint_secret
-        )
-    except ValueError as e:
-        # Invalid payload
-        return 'Invalid payload', 400
-    except stripe.error.SignatureVerificationError as e:
-        # Invalid signature
-        return 'Invalid signature', 400
-
-    # Handle the event
-    if event['type'] == 'checkout.session.completed':
-        session = event['data']['object']
-        handle_checkout_session(session)
-
-    return jsonify({'status': 'success'}), 200
-
-def handle_checkout_session(session):
-    # Here you could update your database or send a confirmation email
-    print("Payment was successful for session ID:", session.id)
-
-@app.route('/submit-order', methods=['POST'])
-def submit_order():
-    data = request.get_json()
-    selected_size = data.get('size') if data else None
-    
-    if selected_size:
-        try:
-            # Create a new Stripe Checkout Session
-            checkout_session = stripe.checkout.Session.create(
-                payment_method_types=['card'],
-                line_items=[{
-                    'price_data': {
-                        'currency': 'usd',
-                        'product_data': {
-                            'name': 'Llama Leisure - Winning in Style',
-                        },
-                        'unit_amount': 1999,
-                    },
-                    'quantity': 1,
-                }],
-                mode='payment',
-                success_url='https://www.newfortniteseason.com/success',
-                cancel_url='https://www.newfortniteseason.com/cancel',
-            )
-            return jsonify({'id': checkout_session.id}), 200
-        except Exception as e:
-            return jsonify(error=str(e)), 400
-    else:
-        return jsonify({'error': 'Size not provided'}), 400
 
 if __name__ == '__main__':
     app.run(debug=True)

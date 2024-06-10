@@ -34,21 +34,20 @@
     <div class="row mt-4">
       <div class="col-md-6">
         <div class="card">
-          <img src="{{ url_for('static', filename='img/shirt1.webp') }}" class="card-img-top" alt="Fortnite Shirt 1">
-          <div class="card-body">
-            <h5 class="card-title">Llama Leisure - Winning in Style</h5>
-            <p class="card-text">$19.99</p>
-            <select id="size-select-1">
-              <option value="">Select Size</option>
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            </select>
-            <button id="payment-button-1" class="btn btn-primary" onclick="submitOrder(1)">Buy Now</button>
-          </div>
+            <img src="{{ url_for('static', filename='img/shirt1.webp') }}" class="card-img-top" alt="Fortnite Shirt 1">
+            <div class="card-body">
+                <h5 class="card-title">Llama Leisure - Winning in Style</h5>
+                <p class="card-text">$19.99</p>
+                <form method="POST" action="{{ url_for('shop') }}">
+                    {{ form.hidden_tag() }}
+                    {{ form.shirt_size.label }}<br>
+                    {{ form.shirt_size() }}
+                    <input type="hidden" name="product_id" value="1">
+                    {{ form.submit(class="btn btn-primary") }}
+                </form>
+            </div>
         </div>
-      </div>
+    </div>
       <div class="col-md-6">
         <div class="card">
           <img src="/static/img/shirt2.webp" class="card-img-top" alt="Fortnite Shirt 2">
@@ -62,7 +61,7 @@
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
             </select>
-            <button id="payment-button-2" class="btn btn-primary" onclick="submitOrder(2)">Buy Now</button>
+            <button id="payment-button-2" class="btn btn-primary">Buy Now</button>
           </div>
         </div>
       </div>
@@ -70,34 +69,4 @@
     <p class="fs-4 mt-4">More products are coming soon. Stay tuned!</p>
   </div>
 </div>
-{% endblock %}
-
-{% block scripts %}
-<script>
-  function submitOrder(shirtNumber) {
-    var sizeSelect = document.getElementById('size-select-' + shirtNumber);
-    var selectedSize = sizeSelect.value;
-    var paymentUrl;
-
-    if (shirtNumber === 1) {
-      paymentUrl = 'https://buy.stripe.com/eVaaHr7HG3NoemQfYY';
-    } else if (shirtNumber === 2) {
-      paymentUrl = '#';
-    }
-
-    if (!selectedSize) {
-      flashMessage('Please select a size.');
-    } else {
-      window.location.href = paymentUrl;
-    }
-  }
-
-  function flashMessage(message) {
-    var flashMessagesDiv = document.getElementById('flash-messages');
-    flashMessagesDiv.innerHTML = '<div class="alert alert-danger">' + message + '</div>';
-    setTimeout(function() {
-      flashMessagesDiv.innerHTML = '';
-    }, 3000);  // Remove the message after 3 seconds
-  }
-</script>
 {% endblock %}
